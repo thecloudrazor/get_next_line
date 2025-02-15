@@ -81,13 +81,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-	{
-		to_be_returned = (char *)malloc(sizeof(char));
-		if (!to_be_returned)
-			return (NULL);
-		*to_be_returned = '\0';
-		return (to_be_returned);
-	}
+		return (ft_strdup(""));
 	else
 	{
 		size = ft_strlen(s + start);
